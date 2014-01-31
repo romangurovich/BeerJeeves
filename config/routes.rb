@@ -1,4 +1,9 @@
 BeerJeeves::Application.routes.draw do
+  get "main/index"
+
+  scope "api" do
+    get 'beers/recommended/:beer_type' => 'beers#recommended', :as => :recommended, :defaults => {:format => "json"}
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
