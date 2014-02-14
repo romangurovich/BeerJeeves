@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  catch_phrase: "May I recommend, sir or madam..."
+
+cat:
+  catch_phrase: "Meow, meow, meow, Beer, meow..."

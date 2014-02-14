@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="80" viewBox="0 0 300 80"> 
+    <!-- add title for accessibility -->
+    <title>Adding Background to Text using SVG clipPath</title> 
+    <defs>  
+      <clipPath id="my-path">
+        <text x="0" y="60" font-size="60">Beer Jeeves</text>
+      </clipPath>
+    </defs>
+    <image xlink:href="beer-flight.jpg" clip-path="url(#my-path)" width="100%" height="100%" preserveAspectRatio="none" />
+</svg>

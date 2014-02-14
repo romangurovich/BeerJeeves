@@ -5,9 +5,14 @@ class BeersController < ApplicationController
     {root: false}
   end
 
+  def all
+    respond_with Beer.all
+  end
+
   def recommended
     beer_type = params[:beer_type]
     @beers = Beer.where(category: beer_type).sample(5)
     respond_with @beers
   end
+
 end
