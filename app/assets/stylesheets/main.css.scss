@@ -2,11 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background: #F0FFEB;
+}
+
 .pane {
-  background: #F2FDE0;
+  background: white;
   padding-bottom: 50px;
 }
 
 .logo {
   top: -200;
+}
+
+input {
+  border-color: #70FF32;
+  border: 3px;
 }

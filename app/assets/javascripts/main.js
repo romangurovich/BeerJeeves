@@ -2,9 +2,20 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function() {
-  $('.typeahead').typeahead( {
-    name: 'beers',
-    limit: 20,
-    remote: 'http://localhost:3000/api/beers/all'
+  $('#beers-search').select2({
+    minimumInputLength: 2,
+    ajax: {
+      url: "../api/beers/autocomplete",
+      dataType: 'json',
+      data: function (term, page) {
+        return {
+          query: term
+        };
+      },
+      results: function (data, page) {
+        return { results: data };
+      }
+    }
   });
+
 });

@@ -4,7 +4,8 @@
       <object class="logo" type="image/svg+xml" data="/assets/logo.svg"><h1>Beer Jeeves</h1></object>
       <p><%=t :catch_phrase %></p>
 
-      <input class="typeahead" type="text" placeholder="A beer you enjoy..." data-provide: "typeahead" spellcheck="false" dir="auto">
+      <input type="hidden" id="beers-search" style="width:75%" placeholder="A beer you enjoy..." class="populate placeholder"/>
+
       <button class="btn btn-success">GO</button> 
     </div> 
   </div>

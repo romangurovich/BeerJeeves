@@ -9,6 +9,11 @@ BeerJeeves::Application.routes.draw do
   scope 'api' do
     get 'beers/recommended/:beer_type' => 'beers#recommended', :as => :recommended, :defaults => {:format => "json"}
     get 'beers/all' => 'beers#all', :as => :all, :defaults => {:format => "json"}
+    resources :beers, only: :index do
+      collection do
+        get :autocomplete
+      end
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

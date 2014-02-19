@@ -9,6 +9,10 @@ class BeersController < ApplicationController
     respond_with Beer.all
   end
 
+  def autocomplete
+    render json: Beer.search(params[:query], autocomplete: true, limit: 10).map { |a| {id: a[:id], text: a[:name]} }
+  end
+
   def recommended
     beer_type = params[:beer_type]
     @beers = Beer.where(category: beer_type).sample(5)
